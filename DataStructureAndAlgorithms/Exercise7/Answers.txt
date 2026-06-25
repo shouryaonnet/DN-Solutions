@@ -1,0 +1,25 @@
+1. Understanding Recursive Algorithms
+
+Recursion is a programming technique in which a method calls itself to solve a problem. It breaks a complex problem into smaller subproblems until a base case is reached.
+
+Advantages of Recursion:
+Makes code simpler and easier to understand.
+Useful for problems that can be divided into smaller similar problems.
+Commonly used in tree traversal, searching, and mathematical computations.
+
+4. Analysis
+Time Complexity of Recursive Algorithm
+
+The recursive algorithm makes one recursive call for each year of forecasting.
+Therefore, the time complexity is:
+
+O(n)
+
+where n is the number of years being predicted.
+
+Optimization of Recursive Solution
+The recursive solution can be optimized using:
+Memoization: Store previously computed results to avoid recalculating them.
+Dynamic Programming: Build solutions iteratively instead of using recursion.
+Iterative Approach: Eliminates recursive call overhead and reduces memory usage.
+These techniques improve efficiency and prevent excessive computation for large inputs.

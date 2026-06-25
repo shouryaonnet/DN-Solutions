@@ -1,0 +1,39 @@
+Qn1: What is Big O Notation?
+
+Big O notation is a mathematical way of describing the performance or efficiency of an algorithm as the size of the input increases. It measures how the running time or memory usage of an algorithm grows with respect to the input size (n).
+
+
+Common Time Complexities
+O(1)	Constant Time
+O(log n)	Logarithmic Time
+O(n)	Linear Time
+O(n log n)	Linearithmic Time
+O(n²)	Quadratic Time
+
+
+Qn-2- Best, Average, and Worst-Case Scenarios for Search Operations?
+Best Case
+
+For Linear Search:
+The element is located at the first position.
+Time Complexity: O(1)
+
+For Binary Search:
+The element is located at the middle position during the first comparison.
+Time Complexity: O(1)
+
+Average Case
+For Linear Search:
+The element is usually found somewhere in the middle of the array.
+Time Complexity: O(n)
+For Binary Search:
+The search space is repeatedly divided in half until the element is found.
+Time Complexity: O(log n)
+
+Worst Case
+For Linear Search:
+The element is at the last position or is not present in the array.
+Time Complexity: O(n)
+For Binary Search:
+The element is located after the maximum number of divisions or is not present in the sorted array.
+Time Complexity: O(log n)
