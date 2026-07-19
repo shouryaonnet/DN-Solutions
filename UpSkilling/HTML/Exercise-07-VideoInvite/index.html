@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Invite</title>
+
+    <script>
+
+        function ready() {
+
+            document.getElementById("status").innerHTML =
+                "Video Ready to Play";
+
+        }
+
+        window.onbeforeunload = function () {
+
+            return "Your form is not completed.";
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<h2>Community Event Video</h2>
+
+<video
+width="600"
+controls
+oncanplay="ready()">
+
+<source src="promo.mp4" type="video/mp4">
+
+</video>
+
+<p id="status"></p>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Local Storage</title>
+
+</head>
+
+<body>
+
+<h2>Select Preferred Event</h2>
+
+<select id="event">
+
+<option>Music Festival</option>
+
+<option>Sports Day</option>
+
+<option>Book Fair</option>
+
+<option>Food Festival</option>
+
+</select>
+
+<br><br>
+
+<button onclick="savePreference()">
+
+Save Preference
+
+</button>
+
+<button onclick="clearPreference()">
+
+Clear Preferences
+
+</button>
+
+<script>
+
+window.onload=function(){
+
+let saved=localStorage.getItem("event");
+
+if(saved){
+
+document.getElementById("event").value=saved;
+
+}
+
+}
+
+function savePreference(){
+
+let value=document.getElementById("event").value;
+
+localStorage.setItem("event",value);
+
+alert("Preference Saved");
+
+}
+
+function clearPreference(){
+
+localStorage.clear();
+
+sessionStorage.clear();
+
+alert("Preferences Cleared");
+
+}
+
+</script>
+
+</body>
+
+</html>

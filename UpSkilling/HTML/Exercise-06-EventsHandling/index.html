@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            width: 300px;
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        img {
+            width: 250px;
+            cursor: pointer;
+        }
+
+        #message,
+        #fee,
+        #count {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Event Feedback</h2>
+
+    <label>Phone Number</label><br>
+    <input type="text" id="phone" onblur="validatePhone()">
+
+    <br>
+
+    <label>Select Event</label><br>
+
+    <select onchange="showFee()" id="event">
+
+        <option value="">Choose Event</option>
+        <option value="100">Music Festival</option>
+        <option value="200">Sports Day</option>
+        <option value="300">Book Fair</option>
+
+    </select>
+
+    <p id="fee"></p>
+
+    <button onclick="submitForm()">Submit</button>
+
+    <p id="message"></p>
+
+    <h3>Double Click Image</h3>
+
+    <img src="event.jpg"
+         ondblclick="enlargeImage(this)"
+         alt="Event">
+
+    <h3>Feedback</h3>
+
+    <textarea rows="5"
+              onkeyup="countCharacters()"
+              id="feedback"></textarea>
+
+    <p id="count">Characters: 0</p>
+
+    <script>
+
+        function validatePhone() {
+
+            let phone = document.getElementById("phone").value;
+
+            if (phone.length != 10)
+                alert("Phone number must contain 10 digits.");
+
+        }
+
+        function showFee() {
+
+            let fee = document.getElementById("event").value;
+
+            document.getElementById("fee").innerHTML =
+                "Event Fee : ₹" + fee;
+
+        }
+
+        function submitForm() {
+
+            document.getElementById("message").innerHTML =
+                "Registration Submitted Successfully!";
+
+        }
+
+        function enlargeImage(img) {
+
+            img.style.width = "450px";
+
+        }
+
+        function countCharacters() {
+
+            let total =
+                document.getElementById("feedback").value.length;
+
+            document.getElementById("count").innerHTML =
+                "Characters: " + total;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

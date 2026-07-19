@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background:#f4f4f4;
+        }
+
+        form{
+
+            width:450px;
+            margin:auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+
+        }
+
+        input,select,textarea{
+
+            width:100%;
+            padding:10px;
+            margin-bottom:15px;
+
+        }
+
+        button{
+
+            width:100%;
+            padding:12px;
+            background:blue;
+            color:white;
+            border:none;
+            font-size:16px;
+            cursor:pointer;
+
+        }
+
+        output{
+
+            display:block;
+            margin-top:15px;
+            color:green;
+            font-weight:bold;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h2 align="center">Community Event Registration</h2>
+
+<form onsubmit="showMessage(); return false;">
+
+<label>Name</label>
+
+<input
+type="text"
+placeholder="Enter your name"
+required
+autofocus>
+
+<label>Email</label>
+
+<input
+type="email"
+placeholder="Enter your email"
+required>
+
+<label>Event Date</label>
+
+<input
+type="date"
+required>
+
+<label>Select Event</label>
+
+<select required>
+
+<option value="">Choose Event</option>
+
+<option>Music Festival</option>
+
+<option>Sports Day</option>
+
+<option>Food Fair</option>
+
+<option>Book Fair</option>
+
+</select>
+
+<label>Message</label>
+
+<textarea
+rows="5"
+placeholder="Your message">
+</textarea>
+
+<button type="submit">
+Register
+</button>
+
+<output id="result"></output>
+
+</form>
+
+<script>
+
+function showMessage(){
+
+document.getElementById("result").innerHTML=
+"Registration Successful!";
+
+}
+
+</script>
+
+</body>
+
+</html>
