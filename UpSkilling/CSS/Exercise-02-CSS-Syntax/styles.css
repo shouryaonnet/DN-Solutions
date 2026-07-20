@@ -1,0 +1,38 @@
+/* ==========================
+   Body Styles
+========================== */
+
+body{
+
+    font-family:Arial;
+    background:#f5f5f5;
+    text-align:center;
+    margin-top:50px;
+
+}
+
+/* ==========================
+   Heading Styles
+========================== */
+
+h1{
+
+    color:darkgreen;
+
+}
+
+/* ==========================
+   Style for Main CTA Button
+========================== */
+
+.cta-button{
+
+    background:#007BFF;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    cursor:pointer;
+    font-size:18px;
+    border-radius:5px;
+
+}
