@@ -1,0 +1,33 @@
+.course-card{
+
+border:1px solid #ddd;
+
+margin:20px;
+
+padding:20px;
+
+border-radius:10px;
+
+transition:.3s;
+
+}
+
+.card--full{
+
+background:#f5f5ff;
+
+}
+
+.card--enrolled{
+
+background:#d7ffd7;
+
+}
+
+.expanded{
+
+transform:scale(1.02);
+
+box-shadow:0 6px 15px rgba(0,0,0,.2);
+
+}

@@ -1,19 +1,69 @@
-<h2>Course List</h2>
+<div
+class="course-card"
 
-<app-course-card
+[ngClass]="cardClasses"
 
-*ngFor="let course of courses"
+[ngStyle]="{
 
-[course]="course"
+'border-left':
+course.gradeStatus=='passed'
+? '8px solid green'
+: course.gradeStatus=='failed'
+? '8px solid red'
+: '8px solid gray'
 
-(enrollRequested)="onEnroll($event)">
+}">
 
-</app-course-card>
+<h3>{{course.name}}</h3>
 
-<p *ngIf="selectedCourseId">
+<p>
 
-Selected Course ID :
+<strong>Code :</strong>
 
-<strong>{{ selectedCourseId }}</strong>
+{{course.code}}
 
 </p>
+
+<p>
+
+<strong>Credits :</strong>
+
+{{course.credits}}
+
+</p>
+
+<div [ngSwitch]="course.gradeStatus">
+
+<p *ngSwitchCase="'passed'">
+
+✅ Passed
+
+</p>
+
+<p *ngSwitchCase="'failed'">
+
+❌ Failed
+
+</p>
+
+<p *ngSwitchDefault>
+
+⏳ Pending
+
+</p>
+
+</div>
+
+<button (click)="toggleDetails()">
+
+{{isExpanded ? 'Hide Details' : 'Show Details'}}
+
+</button>
+
+<button (click)="enroll()">
+
+Enroll
+
+</button>
+
+</div>
